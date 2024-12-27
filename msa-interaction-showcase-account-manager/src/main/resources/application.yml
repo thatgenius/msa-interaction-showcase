@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: msa-interaction-showcase-account-manager
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:8085/showcase_database
+    username: postgres
+    password: '123'
+logging:
+  level:
+    zhbanov.evgenii: DEBUG

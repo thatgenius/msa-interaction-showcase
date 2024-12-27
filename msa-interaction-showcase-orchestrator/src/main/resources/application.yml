@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: msa-interaction-showcase-orchestrator
+msa:
+  integration:
+    showcase:
+      am-client:
+        account-manager:
+          url: 'http://localhost:8081'
+        am-login: "admin"
+        am-password: "admin"
+      orchestrator:
+        keyword-supplier:
+          url: 'http://localhost:8082'
+        wiki-fuzzy-searcher:
+          url: 'http://localhost:8083'
+logging:
+  level:
+    zhbanov.evgenii: INFO
+

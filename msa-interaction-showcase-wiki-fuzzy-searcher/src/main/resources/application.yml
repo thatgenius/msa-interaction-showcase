@@ -1,0 +1,16 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: msa-interaction-showcase-wiki-fuzzy-searcher
+msa:
+  interaction:
+    showcase:
+      wiki-fuzzy-searcher:
+        wikipedia:
+          url: 'https://en.wikipedia.org'
+        page-limit: 1
+logging:
+  level:
+    zhbanov.evgenii: INFO
+

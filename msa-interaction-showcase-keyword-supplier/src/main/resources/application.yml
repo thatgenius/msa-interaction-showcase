@@ -1,0 +1,16 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: msa-interaction-showcase-keyword-supplier
+msa:
+  interaction:
+    showcase:
+      keyword-supplier:
+        random-word-api:
+          url: 'https://random-word-api.vercel.app'
+        account-manager:
+          url: 'http://localhost:8081'
+logging:
+  level:
+    zhbanov.evgenii: INFO
