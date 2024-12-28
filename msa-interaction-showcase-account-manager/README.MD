@@ -1,6 +1,14 @@
-Подготовим таблицу в БД PostgreSQL, воспользовавшись Docker-контейнером:
+### 1. Введение
 
-docker run --name msa-interaction-showcase-postgres -p 8085:5432 -e POSTGRES_PASSWORD=123 -d postgres
+Подготовим таблицу в БД PostgreSQL с данными, необходимыми для работы Account-Manager'а. Для этого воспользуемся Docker-контейнером.
+
+### 2. Предварительные условия
+
+Для выполнения данной инструкции потребуется установленное приложение Docker (docker.com).
+
+### 3. Выполнить следующие команды в командной строке:
+```
+docker run --name msa-interaction-showcase-postgres -p 8084:5432 -e POSTGRES_PASSWORD=123 -d postgres
 docker container ls // to find out CONTAINER ID
 docker exec -it <CONTAINER ID> sh
 
@@ -20,3 +28,4 @@ set schema 'account_manager_schema';
 // select current_schema();
 create table account_manager_schema.account (id bigserial primary key, login varchar(150) UNIQUE NOT NULL, password varchar(25) NOT NULL, name varchar(150) NOT NULL, token varchar(32) UNIQUE);
 insert into account_manager_schema.account (login, password, name) values ('admin', 'admin', 'Ivan');
+```

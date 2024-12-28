@@ -5,7 +5,7 @@ spring:
     name: msa-interaction-showcase-account-manager
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:8085/showcase_database
+    url: jdbc:postgresql://localhost:8084/showcase_database
     username: postgres
     password: '123'
 logging:
